@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys  
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-
+from home.py import click_downloads_button
 
 service = Service(r'C:\selenium_testing\chromedriver.exe')  
 
@@ -12,6 +12,7 @@ driver = webdriver.Chrome(service=service)
 
 driver.get("https://www.python.org")
 
+driver = click_downloads_button(driver)
 
 print(driver.title)
 
